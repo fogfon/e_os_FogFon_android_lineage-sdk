@@ -127,7 +127,7 @@
   <!-- About device screen, LineageOS API Level -->
   <string name="lineage_api_level">רמת ה־API של LineageOS</string>
   <!-- About device screen, LineageOS updates -->
-  <string name="lineage_updates">עדכוני LineageOS</string>
+  <string name="lineage_updates">System updates</string>
   <!-- About device screen, LineageOS version -->
   <string name="lineage_version">גרסת LineageOS</string>
   <!-- About device screen, vendor security patch -->
