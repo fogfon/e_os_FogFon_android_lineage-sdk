@@ -129,7 +129,7 @@
   <!-- About device screen, LineageOS updates -->
   <string name="lineage_updates">System updates</string>
   <!-- About device screen, LineageOS version -->
-  <string name="lineage_version">Versión de LineageOS</string>
+  <string name="lineage_version">LineageOS version</string>
   <!-- About device screen, vendor security patch -->
   <string name="lineage_vendor_security_patch">Nivel del parche de seguridad del proveedor</string>
   <!-- General purpose use "unknown" string -->

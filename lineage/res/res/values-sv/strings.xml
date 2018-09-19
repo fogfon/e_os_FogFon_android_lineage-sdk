@@ -95,7 +95,7 @@
   <!-- About device screen, LineageOS updates -->
   <string name="lineage_updates">System updates</string>
   <!-- About device screen, LineageOS version -->
-  <string name="lineage_version">LineageOS-version</string>
+  <string name="lineage_version">LineageOS version</string>
   <!-- About device screen, vendor security patch -->
   <!-- General purpose use "unknown" string -->
   <string name="unknown">Okänt</string>
