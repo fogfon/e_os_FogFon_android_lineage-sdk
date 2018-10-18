@@ -18,7 +18,7 @@
 -->
 <resources xmlns:xliff="urn:oasis:names:tc:xliff:document:1.2">
   <!-- Label for the LineageOS system components when they are shown to the user. -->
-  <string name="lineageos_system_label">LineageOS System</string>
+  <string name="lineageos_system_label">/e/ system</string>
   <!-- Labels for the MODIFY_PROFILES permission. -->
   <string name="permlab_modifyProfiles">Modify system profiles</string>
   <string name="permdesc_modifyProfiles">Allows an app to modify system profiles.</string>
