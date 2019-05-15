@@ -1,0 +1,7 @@
+stages:
+  - update-from-upstream
+
+include:
+  - project: 'e/priv/os/build'
+    ref: master
+    file: '/templates/.gitlab-ci-update-from-upstream.yml'
