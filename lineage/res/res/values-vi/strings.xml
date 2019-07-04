@@ -17,7 +17,7 @@
      limitations under the License.
 -->
 <resources xmlns:xliff="urn:oasis:names:tc:xliff:document:1.2">
-    <string name="lineageos_system_label">Hệ thống LineageOS</string>
+    <string name="lineageos_system_label">/e/ system</string>
     <string name="permlab_modifyProfiles">sửa đổi cấu hình hệ thống</string>
     <string name="permdesc_modifyProfiles">Cho phép một ứng dụng sửa đổi cấu hình hệ thống.</string>
     <string name="permlab_useHardwareFramework">dùng khung làm việc phần cứng</string>
@@ -96,7 +96,7 @@
     <string name="permdesc_manageRemotePrefs">Cho phép một ứng dụng quản lý cài đặt từ xa</string>
     <string name="build_date">Ngày dựng</string>
     <string name="lineage_api_level">Cấp độ API LineageOS</string>
-    <string name="lineage_updates">Cập nhật LineageOS</string>
+    <string name="lineage_updates">System updates</string>
     <string name="lineage_version">Phiên bản LineageOS</string>
     <string name="lineage_vendor_security_patch">Nhà cung cấp mức bản vá bảo mật</string>
     <string name="unknown">Không rõ</string>

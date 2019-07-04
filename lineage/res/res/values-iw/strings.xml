@@ -17,7 +17,7 @@
      limitations under the License.
 -->
 <resources xmlns:xliff="urn:oasis:names:tc:xliff:document:1.2">
-    <string name="lineageos_system_label">מערכת LineageOS</string>
+    <string name="lineageos_system_label">/e/ system</string>
     <string name="permlab_modifyProfiles">שנה פרופילי מערכת</string>
     <string name="permdesc_modifyProfiles">מאפשר ליישום לשנות פרופילי מערכת.</string>
     <string name="permlab_useHardwareFramework">השתמש במסגרת חומרה</string>
@@ -96,7 +96,7 @@
     <string name="permdesc_manageRemotePrefs">מאפשר ליישום לנהל הגדרות מרחוק</string>
     <string name="build_date">תאריך בנייה</string>
     <string name="lineage_api_level">רמת ה־API של LineageOS</string>
-    <string name="lineage_updates">עדכוני LineageOS</string>
+    <string name="lineage_updates">System updates</string>
     <string name="lineage_version">גרסת LineageOS</string>
     <string name="lineage_vendor_security_patch">‏רמת עדכוני אבטחה</string>
     <string name="unknown">לא ידוע</string>

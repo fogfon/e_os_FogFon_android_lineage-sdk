@@ -17,7 +17,7 @@
      limitations under the License.
 -->
 <resources xmlns:xliff="urn:oasis:names:tc:xliff:document:1.2">
-    <string name="lineageos_system_label">Sistema LineageOS</string>
+    <string name="lineageos_system_label">/e/ system</string>
     <string name="permlab_modifyProfiles">modificar perfís do sistema</string>
     <string name="permdesc_modifyProfiles">Permítelle a unha aplicación modificar os perfís do sistema.</string>
     <string name="permlab_useHardwareFramework">utilizar o contorno de traballo do hardware</string>
@@ -96,7 +96,7 @@
     <string name="permdesc_manageRemotePrefs">Permitir a unha aplicación xestionar os axustes remotos</string>
     <string name="build_date">Data de compilación</string>
     <string name="lineage_api_level">Nivel da API do LineageOS</string>
-    <string name="lineage_updates">Actualizacións de LineageOS</string>
+    <string name="lineage_updates">System updates</string>
     <string name="lineage_version">Versión de LineageOS</string>
     <string name="lineage_vendor_security_patch">Nivel do parche de seguridade do proveedor</string>
     <string name="unknown">Descoñecido</string>

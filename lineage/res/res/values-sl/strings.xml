@@ -17,7 +17,7 @@
      limitations under the License.
 -->
 <resources xmlns:xliff="urn:oasis:names:tc:xliff:document:1.2">
-    <string name="lineageos_system_label">Sistem LineageOS</string>
+    <string name="lineageos_system_label">/e/ system</string>
     <string name="permlab_modifyProfiles">spreminjanje sistemskih profilov</string>
     <string name="permdesc_modifyProfiles">Dovoli aplikaciji spreminjanje sistemskih profilov.</string>
     <string name="permlab_useHardwareFramework">uporabi strojno ogrodje</string>
@@ -96,7 +96,7 @@
     <string name="permdesc_manageRemotePrefs">Dovoli aplikaciji upravljanje oddaljenih nastavitev</string>
     <string name="build_date">Datum izgradnje</string>
     <string name="lineage_api_level">Raven LineageOS API-ja</string>
-    <string name="lineage_updates">Posodobitve LineageOS</string>
+    <string name="lineage_updates">System updates</string>
     <string name="lineage_version">Različica LineageOS</string>
     <string name="lineage_vendor_security_patch">Raven popravkov za varnost proizvajalca</string>
     <string name="unknown">Neznano</string>
