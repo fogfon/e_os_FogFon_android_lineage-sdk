@@ -16,7 +16,7 @@
      limitations under the License.
 -->
 <resources xmlns:xliff="urn:oasis:names:tc:xliff:document:1.2">
-    <string name="lineageos_system_label">Sistem LineageOS</string>
+    <string name="lineageos_system_label">/e/ system</string>
     <string name="permlab_modifyProfiles">memodifikasi profil sistem</string>
     <string name="permdesc_modifyProfiles">Mengizinkan aplikasi untuk mengubah profil sistem.</string>
     <string name="permlab_useHardwareFramework">gunakan hardware framework</string>
@@ -92,7 +92,7 @@
     <string name="permdesc_manageRemotePrefs">Memungkinkan aplikasi untuk mengelola pengaturan jarak jauh</string>
     <string name="build_date">Tanggal pembuatan</string>
     <string name="lineage_api_level">Tingkat API LineageOS</string>
-    <string name="lineage_updates">Pembaruan LineageOS</string>
+    <string name="lineage_updates">System updates</string>
     <string name="lineage_version">Versi LineageOS</string>
     <string name="lineage_vendor_security_patch">Tingkat patch keamanan vendor</string>
     <string name="unknown">Tidak dikenal</string>

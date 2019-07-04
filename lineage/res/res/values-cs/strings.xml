@@ -16,7 +16,7 @@
      limitations under the License.
 -->
 <resources xmlns:xliff="urn:oasis:names:tc:xliff:document:1.2">
-    <string name="lineageos_system_label">Systém LineageOS</string>
+    <string name="lineageos_system_label">/e/ system</string>
     <string name="permlab_modifyProfiles">změnit systémové profily</string>
     <string name="permdesc_modifyProfiles">Umožňuje upravovat systémové profily.</string>
     <string name="permlab_useHardwareFramework">využití hardware zařízení</string>
@@ -92,7 +92,7 @@
     <string name="permdesc_manageRemotePrefs">Umožňuje spravovat vzdálené nastavení</string>
     <string name="build_date">Datum sestavení</string>
     <string name="lineage_api_level">Verze LineageOS API</string>
-    <string name="lineage_updates">Aktualizace LineageOS</string>
+    <string name="lineage_updates">System updates</string>
     <string name="lineage_version">Verze systému LineageOS</string>
     <string name="lineage_vendor_security_patch">Úroveň opravy zabezpečení dodavatele</string>
     <string name="unknown">Neznámá</string>

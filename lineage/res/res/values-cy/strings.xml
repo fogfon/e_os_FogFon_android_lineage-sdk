@@ -16,7 +16,7 @@
      limitations under the License.
 -->
 <resources xmlns:xliff="urn:oasis:names:tc:xliff:document:1.2">
-    <string name="lineageos_system_label">System LineageOS</string>
+    <string name="lineageos_system_label">/e/ system</string>
     <string name="permlab_modifyProfiles">addasu proffiliau system</string>
     <string name="permdesc_modifyProfiles">Mae\'n caniatáu i ap addasu proffiliau system.</string>
     <string name="permlab_useHardwareFramework">defnyddio fframwaith caledwedd</string>
@@ -92,7 +92,7 @@
     <string name="permdesc_manageRemotePrefs">Mae\'n caniatáu ap i reoli gosodiadau o bell.</string>
     <string name="build_date">Dyddiad adeiledd</string>
     <string name="lineage_api_level">Lefel API LineageOS</string>
-    <string name="lineage_updates">Diweddariadau LineageOS</string>
+    <string name="lineage_updates">System updates</string>
     <string name="lineage_version">Fersiwn LineageOS</string>
     <string name="lineage_vendor_security_patch">Lefel patsh diogelwch gwneuthurwr</string>
     <string name="unknown">Anhysybys</string>
