@@ -93,7 +93,7 @@
     <string name="build_date">Data de compilación</string>
     <string name="lineage_api_level">Nivel da API do LineageOS</string>
     <string name="lineage_updates">System updates</string>
-    <string name="lineage_version">Versión de LineageOS</string>
+    <string name="lineage_version">/e/ version</string>
     <string name="lineage_vendor_security_patch">Nivel do parche de seguridade do proveedor</string>
     <string name="unknown">Descoñecido</string>
     <string name="app_killed_message">Matouse a aplicación</string>

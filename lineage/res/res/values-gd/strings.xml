@@ -93,7 +93,7 @@
     <string name="build_date">Ceann-là a’ build</string>
     <string name="lineage_api_level">Leibheil API LineageOS</string>
     <string name="lineage_updates">System updates</string>
-    <string name="lineage_version">An tionndadh de LineageOS</string>
+    <string name="lineage_version">/e/ version</string>
     <string name="lineage_vendor_security_patch">Leibheil brèide tèarainteachd an reiceadair</string>
     <string name="unknown">Chan eil fhios</string>
     <string name="app_killed_message">Chaidh aplacaid a mharbhadh</string>

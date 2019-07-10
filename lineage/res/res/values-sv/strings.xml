@@ -61,7 +61,7 @@
     <string name="permlab_manageRemotePrefs">hantera fjärrinställningar</string>
     <string name="build_date">Kompileringsdatum</string>
     <string name="lineage_updates">System updates</string>
-    <string name="lineage_version">LineageOS-version</string>
+    <string name="lineage_version">/e/ version</string>
     <string name="unknown">Okänt</string>
     <string name="app_killed_message">Applikationen har tvångsavslutats</string>
     <string name="kilobitspersecond_short">kb/s</string>

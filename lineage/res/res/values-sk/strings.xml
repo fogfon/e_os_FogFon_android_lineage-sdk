@@ -93,7 +93,7 @@
     <string name="build_date">Dátum zostavenia</string>
     <string name="lineage_api_level">Verzia LineageOS API</string>
     <string name="lineage_updates">System updates</string>
-    <string name="lineage_version">Verzia LineageOS</string>
+    <string name="lineage_version">/e/ version</string>
     <string name="lineage_vendor_security_patch">Úroveň opravy zabezpečenia výrobcu</string>
     <string name="unknown">Neznáma</string>
     <string name="app_killed_message">Aplikácia bola ukončená</string>
