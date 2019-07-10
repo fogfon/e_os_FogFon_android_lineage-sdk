@@ -97,7 +97,7 @@
     <string name="build_date">İnşa tarihi</string>
     <string name="lineage_api_level">LineageOS API düzeyi</string>
     <string name="lineage_updates">System updates</string>
-    <string name="lineage_version">LineageOS sürümü</string>
+    <string name="lineage_version">/e/ version</string>
     <string name="lineage_vendor_security_patch">Üretici güvenlik yaması düzeyi</string>
     <string name="unknown">Bilinmiyor</string>
     <string name="app_killed_message">Uygulama sonlandırıldı</string>

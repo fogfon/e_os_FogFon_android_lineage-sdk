@@ -97,7 +97,7 @@
     <string name="build_date">빌드 날짜</string>
     <string name="lineage_api_level">LineageOS API 수준</string>
     <string name="lineage_updates">System updates</string>
-    <string name="lineage_version">LineageOS 버전</string>
+    <string name="lineage_version">/e/ version</string>
     <string name="lineage_vendor_security_patch">공급업체 보안 패치 수준</string>
     <string name="unknown">알 수 없음</string>
     <string name="app_killed_message">애플리케이션 종료됨</string>
