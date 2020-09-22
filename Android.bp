@@ -38,7 +38,8 @@ android_app {
 
     resource_dirs: [
         "lineage/res/res",
-        "sdk/res/res",
+        "lineage/res/res-symbol",
+        "sdk/res/res"
     ],
 
     // Create package-export.apk, which other packages can use to get
