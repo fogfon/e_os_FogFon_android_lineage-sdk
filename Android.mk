@@ -66,6 +66,32 @@ include $(BUILD_STATIC_JAVA_LIBRARY)
 $(LOCAL_MODULE) : $(built_aar)
 
 # ===========================================================
+
+# e sdk
+# ============================================================
+include $(CLEAR_VARS)
+
+LOCAL_MODULE := e-sdk.aar
+
+LOCAL_JACK_ENABLED := disabled
+
+LOCAL_CONSUMER_PROGUARD_FILE := $(LOCAL_PATH)/sdk/proguard.txt
+
+LOCAL_RESOURCE_DIR += $(addprefix $(LOCAL_PATH)/, lineage/res/res)
+LOCAL_MANIFEST_FILE := lineage/res/AndroidManifest.xml
+
+lineage_sdk_exclude_files := 'lineageos/'
+LOCAL_JAR_EXCLUDE_PACKAGES := $(lineage_sdk_exclude_files)
+LOCAL_JAR_EXCLUDE_FILES := none
+
+LOCAL_JAVA_LIBRARIES := \
+    $(lineage_sdk_LOCAL_JAVA_LIBRARIES)
+
+
+include $(BUILD_STATIC_JAVA_LIBRARY)
+$(LOCAL_MODULE) : $(built_aar)
+
+# ===========================================================
 # Common Droiddoc vars
 lineage_platform_docs_src_files := \
     $(call all-java-files-under, $(lineage_sdk_src)) \

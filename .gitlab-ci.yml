@@ -1,7 +1,21 @@
 stages:
   - update-from-upstream
+  - build-sdk
 
 include:
   - project: 'e/priv/os/build'
     ref: master
     file: '/templates/.gitlab-ci-update-from-upstream.yml'
+
+image: "registry.gitlab.e.foundation:5000/e/apps/docker-android-apps-cicd:latest"
+
+before_script:
+- chmod a+x buildSdk.sh
+
+build-sdk:
+  stage: build-sdk
+  script:
+  - ./buildSdk.sh
+  artifacts:
+    paths:
+    - e-ui-sdk.jar
