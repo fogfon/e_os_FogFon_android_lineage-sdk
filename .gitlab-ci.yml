@@ -1,6 +1,7 @@
 stages:
   - update-from-upstream
   - build-sdk
+  - publish
 
 include:
   - project: 'e/priv/os/build'
@@ -19,3 +20,22 @@ build-sdk:
   artifacts:
     paths:
     - e-ui-sdk.jar*
+
+publish:
+  image: "registry.gitlab.e.foundation:5000/e/tools/docker-tools:latest"
+  stage: publish
+  before_script:
+    - 'which ssh-agent || ( apt-get update -y && apt-get install openssh-client -y )'
+    - eval $(ssh-agent -s)
+    - echo "$SSH_PRIVATE_KEY_FOR_PUBLICATION" | tr -d '\r' | ssh-add - > /dev/null
+    - mkdir -p ~/.ssh
+    - chmod 700 ~/.ssh
+    - echo "$SSH_KNOWN_HOSTS" > ~/.ssh/known_hosts
+    - chmod 644 ~/.ssh/known_hosts
+  script:
+    - "rsync -avz e-ui-sdk.jar* $PUBLISH_USER@$PUBLISH_URL:$PUBLISH_DEST/"
+    - ssh $PUBLISH_USER@$PUBLISH_URL "mv $PUBLISH_DEST/e-ui-sdk.jar* $RELEASE_DEST/"
+  rules:
+    - if: '$CI_PIPELINE_SOURCE == "push" && $CI_COMMIT_REF_NAME == "v1-pie"'
+      when: manual
+    - when: never
