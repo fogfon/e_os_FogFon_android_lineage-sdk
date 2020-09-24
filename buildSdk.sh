@@ -43,4 +43,8 @@ jar cvf e-ui-sdk.jar -C obj . -C intermediates resources.arsc
 echo "Clearing intermediate sources"
 rm -rf intermediates
 rm -rf obj
+
+echo "Creating sha256sum"
+sha256sum e-ui-sdk.jar > e-ui-sdk.jar.sha256sum
+
 echo "e-ui-sdk.jar generated successully."
