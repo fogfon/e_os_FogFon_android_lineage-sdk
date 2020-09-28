@@ -1,0 +1,47 @@
+plugins {
+    id 'maven-publish'
+}
+
+group = 'lineageos.platform'
+version = '1.0'
+
+publishing {
+    publications {
+        mavenJava(MavenPublication) {
+            artifactId = 'e-ui-sdk'
+            artifact ("e-ui-sdk.jar")
+            pom {
+                name = '/e/ UI SDK Library'
+                description = 'A design library to be used specifically for /e/ OS to have common themes across the apps.'
+                url = 'https://gitlab.e.foundation/e/os/android_lineage-sdk'
+                licenses {
+                    license {
+                        name = 'The Apache License, Version 2.0'
+                        url = 'http://www.apache.org/licenses/LICENSE-2.0.txt'
+                    }
+                }
+                developers {
+                    developer {
+                        id = 'amitkumar'
+                        name = 'Amit Kumar'
+                        email = 'amitkma@e.email'
+                    }
+                }
+            }
+        }
+    }
+
+    repositories {
+        maven {
+            url "https://gitlab.e.foundation/api/v4/projects/185/packages/maven"
+            name "GitLab"
+            credentials(HttpHeaderCredentials) {
+                name = 'Job-Token'
+                value = System.getenv("CI_JOB_TOKEN")
+            }
+            authentication {
+                header(HttpHeaderAuthentication)
+            }
+        }
+    }
+}
