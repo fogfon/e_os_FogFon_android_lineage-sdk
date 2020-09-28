@@ -9,7 +9,7 @@ publishing {
     publications {
         mavenJava(MavenPublication) {
             artifactId = 'e-ui-sdk'
-            artifact ("/e-ui-sdk.jar")
+            artifact ("e-ui-sdk.jar")
             pom {
                 name = '/e/ UI SDK Library'
                 description = 'A design library to be used specifically for /e/ OS to have common themes across the apps.'
