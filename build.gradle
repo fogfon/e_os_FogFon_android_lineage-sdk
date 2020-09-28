@@ -7,7 +7,7 @@ version = '1.0'
 
 publishing {
     publications {
-        mavenJava(MavenPublication) {
+        maven(MavenPublication) {
             artifactId = 'e-ui-sdk'
             artifact ("e-ui-sdk.jar")
             pom {
