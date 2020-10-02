@@ -2,7 +2,7 @@ plugins {
     id 'maven-publish'
 }
 
-groupId = 'foundation.e'
+group = 'lineageos.platform'
 version = '1.0'
 
 publishing {
