@@ -49,8 +49,6 @@ public class LineageDatabaseHelper extends SQLiteOpenHelper{
 
     private static final String DATABASE_NAME = "lineagesettings.db";
     private static final int DATABASE_VERSION = 13;
-    private static final int E_DB_INCREMENT = 2;
-    private static final int E_DATABASE_VERSION = DATABASE_VERSION+E_DB_INCREMENT;
 
     private static final String DATABASE_NAME_OLD = "cmsettings.db";
 
@@ -141,7 +139,7 @@ public class LineageDatabaseHelper extends SQLiteOpenHelper{
      * @param userId
      */
     public LineageDatabaseHelper(Context context, int userId) {
-        super(context, dbNameForUser(context, userId, DATABASE_NAME), null, E_DATABASE_VERSION);
+        super(context, dbNameForUser(context, userId, DATABASE_NAME), null, DATABASE_VERSION);
         mContext = context;
         mUserHandle = userId;
 
@@ -198,12 +196,9 @@ public class LineageDatabaseHelper extends SQLiteOpenHelper{
 
     @Override
     public void onUpgrade(SQLiteDatabase db, int oldVersion, int newVersion) {
-        Log.d(TAG, "Upgrading from version: " + oldVersion + " to " + newVersion);
+        if (LOCAL_LOGV) Log.d(TAG, "Upgrading from version: " + oldVersion + " to " + newVersion);
         int upgradeVersion = oldVersion;
-        int eUpgradeVersion = oldVersion;
-        if(upgradeVersion>13){
-            upgradeVersion = upgradeVersion - E_DB_INCREMENT; //to respect lineage version
-	}
+
         if (upgradeVersion < 2) {
             db.beginTransaction();
             try {
@@ -337,7 +332,7 @@ public class LineageDatabaseHelper extends SQLiteOpenHelper{
 
                     if (value == 0) {
                         stmt = db.compileStatement("UPDATE system SET value=? WHERE name=?");
-                        stmt.bindLong(1, 1);
+                        stmt.bindLong(1, 2);
                         stmt.bindString(2, LineageSettings.System.STATUS_BAR_CLOCK);
                         stmt.execute();
                     }
@@ -450,42 +445,6 @@ public class LineageDatabaseHelper extends SQLiteOpenHelper{
                 }
             }
             upgradeVersion = 13;
-        }
-        if(upgradeVersion > eUpgradeVersion)
-            eUpgradeVersion = upgradeVersion;
-        if (eUpgradeVersion < 14) {
-             if (mUserHandle == UserHandle.USER_OWNER) {
-                // Update STATUS_BAR_CLOCK
-                db.beginTransaction();
-                SQLiteStatement stmt = null;
-                try {
-                    stmt = db.compileStatement("UPDATE system SET value=? WHERE name=?");
-                    stmt.bindLong(1, 1);
-                    stmt.bindString(2, LineageSettings.System.STATUS_BAR_CLOCK);
-                    stmt.execute();
-                    db.setTransactionSuccessful();
-                } catch (SQLiteDoneException ex) {
-                    // LineageSettings.System.STATUS_BAR_CLOCK is not set
-                } finally {
-                    if (stmt != null) stmt.close();
-                    db.endTransaction();
-                }
-                db.beginTransaction();
-                stmt = null;
-                try {
-                    stmt = db.compileStatement("UPDATE system SET value=? WHERE name=?");
-                    stmt.bindLong(1, 2);
-                    stmt.bindString(2, LineageSettings.System.STATUS_BAR_BATTERY_STYLE);
-                    stmt.execute();
-                    db.setTransactionSuccessful();
-                } catch (SQLiteDoneException ex) {
-                    // LineageSettings.System.STATUS_BAR_BATTERY_STYLE is not set
-                } finally {
-                    if (stmt != null) stmt.close();
-                    db.endTransaction();
-               }
-            }
-            eUpgradeVersion = 14;
         }
         // *** Remember to update DATABASE_VERSION above!
     }
