@@ -2,13 +2,15 @@ plugins {
     id 'maven-publish'
 }
 
-group = 'lineageos.platform'
+groupId = 'foundation.e'
 version = '1.0'
 
 publishing {
     publications {
         maven(MavenPublication) {
+            groupId = 'foundation.e'
             artifactId = 'e-ui-sdk'
+            version = '1.0'
             artifact ("e-ui-sdk.jar")
             pom {
                 name = '/e/ UI SDK Library'
