@@ -24,4 +24,4 @@ build-sdk:
 publish:
   stage: publish
   script: 
-    - 'gradle publish'
+    - 'gradle publish --debug'
