@@ -487,6 +487,26 @@ public class LineageDatabaseHelper extends SQLiteOpenHelper{
             }
             eUpgradeVersion = 14;
         }
+        if (eUpgradeVersion < 15) {
+             if (mUserHandle == UserHandle.USER_OWNER) {
+                // Update STATUS_BAR_CLOCK
+                db.beginTransaction();
+                SQLiteStatement stmt = null;
+                try {
+                    stmt = db.compileStatement("UPDATE system SET value=? WHERE name=?");
+                    stmt.bindLong(1, 2);
+                    stmt.bindString(2, LineageSettings.System.STATUS_BAR_CLOCK);
+                    stmt.execute();
+                    db.setTransactionSuccessful();
+                } catch (SQLiteDoneException ex) {
+                    // LineageSettings.System.STATUS_BAR_CLOCK is not set
+                } finally {
+                    if (stmt != null) stmt.close();
+                    db.endTransaction();
+                }
+            }
+            eUpgradeVersion = 15;
+        }
         // *** Remember to update DATABASE_VERSION above!
     }
 
