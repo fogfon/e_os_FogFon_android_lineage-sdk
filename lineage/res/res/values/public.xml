@@ -7,6 +7,7 @@
 	-->
 	<eat-comment />
 
+
 	<public type="color" name="color_default_red1" id="0x3f060001" />
 	<public type="color" name="color_default_blue1" id="0x3f060002" />
 	<public type="color" name="color_default_blue2" id="0x3f060003" />
@@ -22,4 +23,9 @@
 	<public type="color" name="color_default_secondary_text" id="0x3f061005" />
 	<public type="color" name="color_default_background" id="0x3f061006" />
 	<public type="color" name="color_default_foreground" id="0x3f061007" />
+
+	<public type="drawable" name="ic_menu" id="0x3f080001" />
+	<public type="drawable" name="ic_search" id="0x3f080002" />
+	<public type="drawable" name="ic_star" id="0x3f080003" />
+	<public type="drawable" name="ic_star_filled" id="0x3f080004" />
 </resources>
