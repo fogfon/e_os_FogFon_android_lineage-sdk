@@ -22,6 +22,7 @@ LOCAL_CERTIFICATE := platform
 LOCAL_AAPT_FLAGS := --auto-add-overlay
 LOCAL_AAPT_FLAGS += --private-symbols org.lineageos.platform.internal
 LOCAL_RESOURCE_DIR := $(addprefix $(LOCAL_PATH)/, res)
+LOCAL_RESOURCE_DIR += $(addprefix $(LOCAL_PATH)/, res-symbol)
 LOCAL_RESOURCE_DIR += $(LOCAL_PATH)/../../sdk/res/res
 
 # Tell aapt to create "extending (non-application)" resource IDs,
