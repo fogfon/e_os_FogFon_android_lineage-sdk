@@ -17,4 +17,15 @@
 <resources>
 
     <color name="color_error">#FF5630</color>
+
+    <!-- Default /e/ themes color for dark theme
+         These colors are the ones which will be overridden by RRO packages to change the theme across the device.
+     -->
+    <color name="color_default_primary">#333333</color>
+    <color name="color_default_primary_dark">#4D4D4D</color>
+    <color name="color_default_accent">@color/color_default_blue1</color>
+    <color name="color_default_primary_text">#FFFFFF</color>
+    <color name="color_default_secondary_text">#CCFFFFFF</color>
+    <color name="color_default_background">#000000</color>
+    <color name="color_default_foreground">#666666</color>
 </resources>
