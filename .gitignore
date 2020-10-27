@@ -1,2 +1,3 @@
 # Ignore the samples directory, since they should be separate git projects
 samples/
+e-ui-sdk.jar
