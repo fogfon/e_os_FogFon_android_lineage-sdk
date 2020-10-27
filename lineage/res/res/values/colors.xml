@@ -31,12 +31,12 @@
     <!-- Default /e/ themes color for light theme
          These colors are the ones which will be overridden by RRO packages to change the theme across the device.
      -->
-    <color name="color_default_primary">@color/color_default_blue1</color>
-    <color name="color_default_primary_dark">@color/color_default_blue2</color>
-    <color name="color_default_accent">@color/color_default_green1</color>
+    <color name="color_default_primary">#FFFFFF</color>
+    <color name="color_default_primary_dark">#FFFFFF</color>
+    <color name="color_default_accent">@color/color_default_blue1</color>
     <color name="color_default_primary_text">#CC000000</color>
     <color name="color_default_secondary_text">#8C000000</color>
-    <color name="color_default_background">@color/color_default_gray1</color>
+    <color name="color_default_background">#FAFAFA</color>
     <color name="color_default_foreground">#FFFFFF</color>
 
 </resources>
