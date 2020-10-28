@@ -8,10 +8,27 @@ if [[ -z "${ANDROID_HOME}" ]]; then
 	echo "{ANDROID_HOME} path variable is not set. Set it to point Android SDK."
 	exit 1
 else
-	build_tools_dir=$ANDROID_HOME/build-tools/29.0.2/
+	build_tools_dir=$ANDROID_HOME/build-tools/
+	declare -a build_tools
+	for f in $build_tools_dir*;
+	do
+		if [ -d "$f" ]; then
+			build_tools+=($(basename $f))
+    	fi
+	done
+	if [ ${#build_tools[@]} -eq 0 ]; then
+		echo "No build-tools found at $build_tools_dir. Make sure you've atleast one build tools downloaded."
+		exit 1
+	else 
+		sorted_build_tools=($(for l in ${build_tools[@]}; do echo $l; done | sort))
+		echo "Available build-tools are ${sorted_build_tools[@]}"
+		latest_build_tool=${sorted_build_tools[${#sorted_build_tools[@]}-1]}
+		echo "Using latest build tool available: $latest_build_tool"
+	fi
 fi
 
-aapt2="${build_tools_dir}/aapt2"
+latest_build_tool_dir="$build_tools_dir$latest_build_tool"
+aapt2="${latest_build_tool_dir}/aapt2"
 
 echo "Compiling resources"
 $aapt2 compile --dir lineage/res/res -o intermediates/resources.zip
