@@ -28,4 +28,16 @@
 	<public type="drawable" name="ic_search" id="0x3f080002" />
 	<public type="drawable" name="ic_star" id="0x3f080003" />
 	<public type="drawable" name="ic_star_filled" id="0x3f080004" />
+	<public type="drawable" name="ic_camera_effects" id="0x3f080005" />
+	<public type="drawable" name="ic_camera_exposure" id="0x3f080006" />
+	<public type="drawable" name="ic_camera_exposure_locked" id="0x3f080007" />
+	<public type="drawable" name="ic_camera_exposure_unlocked" id="0x3f080008" />
+	<public type="drawable" name="ic_camera_flash_auto" id="0x3f080009" />
+	<public type="drawable" name="ic_camera_flash_off" id="0x3f08000a" />
+	<public type="drawable" name="ic_camera_flash_on" id="0x3f08000b" />
+	<public type="drawable" name="ic_camera_settings" id="0x3f08000c" />
+	<public type="drawable" name="ic_camera_shutter" id="0x3f08000d" />
+	<public type="drawable" name="ic_camera_toggle" id="0x3f08000e" />
+	<public type="drawable" name="ic_camera_video" id="0x3f08000f" />
+
 </resources>
