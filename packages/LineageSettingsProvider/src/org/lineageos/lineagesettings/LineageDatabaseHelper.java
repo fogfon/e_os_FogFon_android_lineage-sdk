@@ -454,13 +454,17 @@ public class LineageDatabaseHelper extends SQLiteOpenHelper{
         if(upgradeVersion > eUpgradeVersion)
             eUpgradeVersion = upgradeVersion;
         if (eUpgradeVersion < 14) {
+            // not doing anything anymore 
+            eUpgradeVersion = 14;
+        }
+        if (eUpgradeVersion < 15) {
              if (mUserHandle == UserHandle.USER_OWNER) {
-                // Update STATUS_BAR_CLOCK
+                // Update STATUS_BAR_CLOCK because was centered by db 14 before (not in code anymore)
                 db.beginTransaction();
                 SQLiteStatement stmt = null;
                 try {
                     stmt = db.compileStatement("UPDATE system SET value=? WHERE name=?");
-                    stmt.bindLong(1, 1);
+                    stmt.bindLong(1, 2);
                     stmt.bindString(2, LineageSettings.System.STATUS_BAR_CLOCK);
                     stmt.execute();
                     db.setTransactionSuccessful();
@@ -470,11 +474,13 @@ public class LineageDatabaseHelper extends SQLiteOpenHelper{
                     if (stmt != null) stmt.close();
                     db.endTransaction();
                 }
+                
+                // Update STATUS_BAR_BATTERY_STYLE because was displayed as text by db 14 before (not in code anymore)
                 db.beginTransaction();
                 stmt = null;
                 try {
                     stmt = db.compileStatement("UPDATE system SET value=? WHERE name=?");
-                    stmt.bindLong(1, 2);
+                    stmt.bindLong(1, 0);
                     stmt.bindString(2, LineageSettings.System.STATUS_BAR_BATTERY_STYLE);
                     stmt.execute();
                     db.setTransactionSuccessful();
@@ -484,26 +490,6 @@ public class LineageDatabaseHelper extends SQLiteOpenHelper{
                     if (stmt != null) stmt.close();
                     db.endTransaction();
                }
-            }
-            eUpgradeVersion = 14;
-        }
-        if (eUpgradeVersion < 15) {
-             if (mUserHandle == UserHandle.USER_OWNER) {
-                // Update STATUS_BAR_CLOCK
-                db.beginTransaction();
-                SQLiteStatement stmt = null;
-                try {
-                    stmt = db.compileStatement("UPDATE system SET value=? WHERE name=?");
-                    stmt.bindLong(1, 2);
-                    stmt.bindString(2, LineageSettings.System.STATUS_BAR_CLOCK);
-                    stmt.execute();
-                    db.setTransactionSuccessful();
-                } catch (SQLiteDoneException ex) {
-                    // LineageSettings.System.STATUS_BAR_CLOCK is not set
-                } finally {
-                    if (stmt != null) stmt.close();
-                    db.endTransaction();
-                }
             }
             eUpgradeVersion = 15;
         }
