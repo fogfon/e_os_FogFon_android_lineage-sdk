@@ -1,6 +1,7 @@
 stages:
   - update-from-upstream
   - build-sdk
+  - publish 
 
 include:
   - project: 'e/priv/os/build'
@@ -19,3 +20,8 @@ build-sdk:
   artifacts:
     paths:
     - e-ui-sdk.jar
+
+publish:
+  stage: publish
+  script: 
+    - 'gradle publish'
