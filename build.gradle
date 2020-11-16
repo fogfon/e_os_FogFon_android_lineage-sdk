@@ -7,7 +7,7 @@ publishing {
         maven(MavenPublication) {
             groupId = 'foundation.e'
             artifactId = 'e-ui-sdk'
-            version = '1.0-pie'
+            version = '1.0-oreo'
             artifact ("e-ui-sdk.jar")
             pom {
                 name = '/e/ UI SDK Library'
