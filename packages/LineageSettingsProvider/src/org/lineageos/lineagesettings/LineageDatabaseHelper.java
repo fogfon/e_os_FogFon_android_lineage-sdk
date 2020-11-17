@@ -590,6 +590,11 @@ public class LineageDatabaseHelper extends SQLiteOpenHelper{
 
             loadBooleanSetting(stmt, LineageSettings.System.SYSTEM_PROFILES_ENABLED,
                     R.bool.def_profiles_enabled);
+		
+	    // Added by FogFon
+            loadBooleanSetting(stmt, LineageSettings.System.LOCKSCREEN_PIN_SCRAMBLE_LAYOUT,
+                    R.bool.def_lockscreen_scramble_pin_layout);
+ 
 
             loadIntegerSetting(stmt, LineageSettings.System.ENABLE_FORWARD_LOOKUP,
                     R.integer.def_forward_lookup);
