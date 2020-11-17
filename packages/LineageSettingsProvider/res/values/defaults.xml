@@ -18,6 +18,9 @@
 <resources>
     <!-- Defaults for System -->
 
+	<!-- Default for Settings.Global.LOCKSCREEN_PIN_SCRAMBLE_LAYOUT added by FogFon-->
+     <bool name="def_lockscreen_scramble_pin_layout">true</bool>
+
     <!-- Default for LineageSettings.System.QS_QUICK_PULLDOWN
          0. Off
          1. Right
